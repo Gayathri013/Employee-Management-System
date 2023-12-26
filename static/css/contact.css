@@ -1,0 +1,186 @@
+
+.container
+{
+  background-color: black;
+  height:60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  
+}
+.container ::after{
+  background-image: url(images/Contactppl.jpeg);
+  content:"";
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 62.5vh;
+  opacity: 0.4;
+}
+.contentcenter
+{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction:column; 
+height:60vh;
+width: 100%;
+}
+.first
+{
+text-align: center;
+font-weight:normal;
+font-size:40px;
+color:white;
+}
+.second
+{
+font-size: 20px;
+color:white;
+text-align: center;
+}
+.hline{
+  background-color:#7fbd1c;
+  width:100vw;
+  height:2px;
+}
+.contactform{
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;  
+}
+textarea {
+  max-width:400px;
+  max-height:200px;
+  min-width:330px;
+  min-height: 100px;
+}
+.ContactImage{
+  margin-right:40px;
+  margin-top:30px;
+}
+form
+{
+  margin:30px 20px 20px 250px;
+  padding:10px;
+}
+/* form .btn
+{
+  display: flex;
+  justify-content: center;
+} */
+.btn
+{
+      background-color:#7fbd1c;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin:50px;
+}
+.field
+{
+  width:20vw;
+  padding:10px;
+  height:20px;
+}
+.green-contact
+{
+color:#7fbd1c;
+font-size:20px;
+text-align:center;
+}
+.text-center{
+  text-align:center;
+  color:darkorange;
+  font-size:30px;
+  margin-bottom: 30px;
+  font-weight: lighter;
+}
+.Locations 
+{
+ display: flex;
+ flex-direction:row;
+ justify-content:space-between;
+ align-items: center;
+}
+.USA pre,.India pre
+{
+  font-family:Serif;
+}
+.Locations .seneca {
+  font-family: Sans-Serif ;
+  font-weight: bold;
+}
+.location2  .USA
+{
+margin-right:400px;
+}
+img:hover {
+  opacity:0.6;
+  cursor:pointer;
+}
+.footercontainer{
+  height:10vh;
+  background-color:#f3f3f3;
+  /* border:2px solid darkorange; */
+  display:flex;
+  align-items:center;
+  padding:0 10em;
+  justify-content: center;
+}
+
+/* .fa-twitter{
+background-color:rgb(20, 168, 227);
+color:white;
+} */
+.social-icons .fa-linkedin {
+color: #0077B5; /* LinkedIn blue */
+}
+
+.social-icons .fa-facebook {
+color: #3b5998; /* Facebook blue */
+}
+
+.social-icons .fa-twitter {
+color: #1DA1F2; /* Twitter blue */
+}
+.social-icons {
+display: flex;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.social-icons li {
+margin-right: 10px;
+}
+
+.social-icons li:last-child {
+margin-right: 0;
+}
+
+.social-icons a {
+display: block;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+text-align: center;
+background-color: white;
+line-height: 40px;
+}
+
+.social-icons a:hover {
+background-color: #ccc;
+color: #fff;
+}
+
+.social-icons i {
+font-size: 20px;
+}

@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+	{% block title %}
+	<link rel="stylesheet" href="{{url_for('static' , path = 'css/profile.css')}}">
+	{% endblock %}  
+
+	{% block body %}
+	<main>
+	{% if employee %}
+	<form method="POST" action="/profile_update" enctype="multipart/form-data">
+	<h2>PROFILE</h2>
+	<div class="LeftrightColumns">
+		<div class="leftColmn">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" value="{{employee.name}}">
+			<label for="role">Role:</label>
+			<input type="text" id="role" name="stack" value="{{employee.stack}}">
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" value="{{employee.email}}">
+			<label for="phone-number">Phone Number:</label>
+			<input type="text" id="phone-number" name="phn_number" value="{{employee.phone_number}}">
+			<label for="dob">Date of Birth:</label>
+			<input type="date" name="date_of_birth" value="{{employee.date_of_birth}}">
+			<br>
+			<br>
+			<label for="blood-group">Blood Group:</label>
+			<select id="blood-group" name="blood_group" >
+				<option value="{{employee.blood_group}}" selected>{{employee.blood_group}}</option>
+				<option value="A+">A+</option>
+				<option value="A-">A-</option>
+				<option value="B+">B+</option>
+				<option value="B-">B-</option>
+				<option value="AB+">AB+</option>
+				<option value="AB-">AB-</option>
+				<option value="O+">O+</option>
+				<option value="O-">O-</option>
+			</select>
+			<label for="address">Address:</label>
+			<textarea id="address" name="address" rows="5" cols="80">{{employee.address}}</textarea>
+		</div>
+		<br>
+		
+		<div class="right-column">
+			<div class="uploadphoto">
+				{% if employee.image_url %}
+				 <img src="{{employee.image_url}}"  class="fa-solid fa-circle-user" style="width:12rem;" >
+				
+				{% else %}
+				 <label for="photo-upload" class="Imgbox"><i class="fa-solid fa-circle-user"
+					style="color: #808000; width:12rem;"></i></label>
+			     <input type="file" name="file" accept=".png , .jgp" id="photo-upload" style="display:none">
+				{% endif %}
+			</div>
+			<label for="Experience">Experience:</label>
+			<input type="text" id="Experience" name="experiance" value="{{employee.experiance}}">
+			<label for="Award1">Bravo:</label>
+			<input type="text" id="Award1" name="bravo" value="{{employee.bravo}}">
+			<label for="Award2">Rise:</label>
+			<input type="text" id="Award2" name="raises" value="{{employee.raises}}">
+			<label for=" Award3">Trumpet:</label>
+			<input type="text" id="Award3" name="trumpet" value="{{employee.trumpet}}">
+			<label for=" Interests">Interests:</label>
+			<input type="text" id="Interests" name="interests" value="{{employee.interests}}">
+			<label for="text">Hobbies</label>
+			<input type="text" id="Hobbies" name="hobbies" value="{{employee.hobbies}}">
+		</div>
+	</div>
+   <br>
+	<div class=" submitbutton">
+		<input type="submit" value="Save">
+	</div>
+
+	</form>
+	{% endif %}
+	</main>
+
+
+	<!-- <script>
+		var imgBox = document.getElementsByClassName("fa-solid fa-circle-user");
+		var loadFile = function (event) {
+			imgBox.style.backgroundImage = "url(" + URL.createObjectURL(event.target.files[0]) + ")";
+		}
+	</script> -->
+		
+{% endblock %}
+
+
+
+  
+
+

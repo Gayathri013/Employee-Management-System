@@ -1,0 +1,52 @@
+{% extends 'ad_base.html' %}
+
+
+{% block title %}
+    <link rel="stylesheet" href="{{url_for('static' , path = 'css/employee.css') }}">
+{% endblock %}
+
+{% block body%}
+
+<main>
+    <div class="Searchcontainer">
+        <form method="GET" action="/ad_search">
+        <div class="search-bar">
+            <input type="text" id="query" name="query" placeholder="Search employee by ID or Contact No...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+        </form>
+    </div>
+    <div class="container">
+        {% for i in range(0,total ,4) %}
+        <div class="rowcards">
+            {% for j in range(i,i+4) %}
+            {% if j<total %}
+              <div class="card">
+                    {% if employee_details[j].image_url == null%}
+                    <img src="" width="110" height="130">
+                    {% else %}
+                    <img src="{{employee_details[j].image_url}}" width="110" height="130">
+                    {% endif %}
+                    <div class="content">
+                        <h3 class="Main-text">{{employee_details[j].name}}</h3>
+                        <p class="text">{{employee_details[j].stack}}</p>
+                        <p class="text">{{employee_details[j].email}}</p>
+                        <form method="GET" action="/ad_profile/{{employee_details[j].user_id}}">
+                        <button>View</button>
+                       </form>
+                       <form method="GET" action="/delete_employee/{{employee_details[j].user_id}}">
+                        <button>Delete</button>
+                       </form>
+                    </div>
+                </div> 
+            {% endif %}
+            {%endfor%}
+        </div>
+        {% endfor %}
+       
+        
+    </div>
+    </main>
+
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'ad_base.html' %}
+	{% block title %}
+    <link rel="stylesheet" href="{{url_for('static' , path = 'css/view.css')}}">
+    {% endblock %}
+
+    {% block body %}
+    <br>
+    <div class="container">
+        <div class="employee-details">
+            <div class="pdh-center">Personal Details</div> 
+            <div class="personal-details">
+                <div class="container1">
+                <p> Name : <span id="name">{{employee.name}}</span></p>
+                <p> Email : <span id="email">{{employee.email}}</span></p>
+                <p> Phone : <span id="phone">{{employee.phone_number}}</span></p>
+                <p> Date of Birth : <span id="dob">{{employee.date_of_birth}}</span></p>
+                <p> Blood Group : <span id="blood">{{employee.blood_group}}</span></p>
+                <p> Address : <span id="address">{{employee.address}}</span></p>
+                <p> Interests : <span id="interests">{{employee.interests}}</span></p>
+                <p> Hobbies : <span id="hobbies">{{employee.hobbies}}</span></p>
+            </div>
+                <div class="uploadphoto">
+                    {% if employee.image_url == null %}
+                      <label for="photo-upload" class="Imgbox"><i class="fa-solid fa-circle-user"
+                        style="color: #808000; width:10rem;"></i></label>
+                    {% else %}
+                       <img src="../{{employee.image_url}}" class="fa-solid fa-circle-user" style="width: 12rem;" >
+                    {% endif %}
+                </div>
+            </div>
+            <div class="wdh-center">Work Details</div>
+            <div class="work-details">
+                <p> Emp ID : <span id="empid">{{employee.user_id}}</span></p>
+                <p> Role : <span id="role">{{employee.stack}}</span></p>
+                <p> Experience : <span id="experience">{{employee.experiance}}</span></p>
+                <p> Rise awards : <span id="rise">{{employee.raises}}</span></p>
+                <p> Trumpet awards : <span id="trumpet">{{employee.trumpet}}</span></p>
+                <p> Bravo awards : <span id="bravo">{{employee.bravo}}</span></p>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}

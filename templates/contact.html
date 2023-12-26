@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% block title %}
+<link rel="stylesheet" href="{{url_for('static' , path = 'css/contact.css') }}">
+{% endblock %}  
+
+{% block body %}
+
+<main>
+    
+    <div class="container" >
+            <div class="contentcenter">
+                <p class="first">Contact US</p>
+                <p class="second">GOT A QUESTION? WE WILL GIVE A STRAIGHT ANSWER</p>
+            </div>
+    </div>
+    <br>
+    <div class="contactform">
+        <form id="myForm" method="POST">
+            <h3 class="text-center">Get in Touch</h3>
+            <input type="text" id="name" class="field" placeholder="Name" ><br>
+            <span id="name-error"></span>
+            <br> <input type="text" id="email" class="field" placeholder="Email" required><br>
+            <span id="email-error"></span>
+            <br> <input type="text" id="phone" class="field" placeholder="Phone" required><br>
+            <span id="phone-error"></span>
+            <br>
+            <textarea id="message" class="message" rows="4" cols="50" placeholder="Message" required=""
+                style="width: 455px; height: 80px;"></textarea>
+            <span id="message-error"></span>
+            <br>
+            <input type="submit" class="btn" value="Submit">
+        </form>
+        <div class="ContactImage">
+            <img src="{{url_for('static' , path = 'images/Getintouch.jpeg')}}" alt="contactus" width="550px" height="auto">
+        </div>
+    </div>
+    <h2 class="text-center">Locations</h2>
+    <div class="Locations">
+        <br>
+        <div class="location1">
+            <img src="{{url_for('static' , path = 'images/India.jpg')}}" alt="hyderabad" width="350px" height="auto">
+            <br>
+            <div class="India">
+                <h3 class="text-center">India</h3>
+                <p>
+                <pre><p class="seneca"> SenecaGlobal IT Services Private Limited</p>
+3rd Floor, South Wing, Aurobindo Galaxy
+Survey Number No. 83/1, TSIIC Raidurg
+Hyderabad - 500081, Telangana, India
+Phone: +91.40.66073500</pre>
+                </p>
+            </div>
+        </div>
+        <div class="location2">
+            <img src="{{url_for('static' , path = 'images/USA.jpg')}}" width="350px" height="auto">
+            <br>
+            <div class="USA">
+                <h3 class="text-center">USA</h3>
+                <p>
+                <pre><p class="seneca">SenecaGlobal, Inc.</p>
+2625 Butterfield Rd, Suite 214E
+Oak Brook, Illinois 60523
+Phone: +1.630.320.3680
+Fax: +1.630.320.3555</pre>
+                </p>
+            </div>
+        </div>
+    </div>
+    </main>
+<footer>
+       <div class="footercontainer">
+        <div class="logo">
+            <img src="{{url_for('static' , path = 'images/Logo.png')}}" alt="logo" width="150em" height="40em">
+            <p>&copy; 2023 Employee Directory. All rights reserved.</p>
+        </div>
+        <div>
+        <ul class="social-icons">
+            <li><a href="https://www.linkedin.com/company/senecaglobal/mycompany/verification/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://www.facebook.com/SenecaGlobalInnovates" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/senecaglobal" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          </ul>
+        </div>
+       </div>
+</footer>
+
+{% endblock %}
+
+{% block script %}
+<script src="{{url_for('static' , path = 'js/contact.js') }}"></script>
+{% endblock %}

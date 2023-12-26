@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForgotPasswordPage</title>
+    <link rel="stylesheet" href="{{url_for('static' , path = 'css/forgot.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <form method="GET" action="/passwordsetting">
+        <div class="container1">
+             <br>
+            <input id="user_id" name="user_id" placeholder="User ID" required>  
+            <br>
+            <br>
+            <label for="SecurityQns">Security Questions:</label>
+            <br>
+            <select id="SecurityQns" name="SecurityQns">
+                <option value="What is your favorite food?">What is your favorite food?</option>
+                <option value="What is the name of your favorite teacher? ">What is the name of your favorite teacher?
+                </option>
+                <option value="What is your favorite color?">What is your favorite color?</option>
+                <option value="What was the name of your first best friend?">What was the name of your first best
+                    friend?</option>
+                <option value="What is your favorite holiday destination?">What is your favorite holiday destination?
+                </option>
+            </select>
+        </div>
+       
+        <div class="container2">
+            <label for="answer">Your Answer here : </label>
+            <br>
+            <input type="text" id="answer" name="answer" placeholder="Type your answer here">
+            <br>
+        </div>
+        <div>
+          <button type="submit" value="ResetPassoword">Reset Passoword</button>
+        </div>
+        </form>
+    </div>
+</body>
+
+</html>

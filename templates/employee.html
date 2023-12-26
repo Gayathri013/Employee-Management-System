@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}
+    <link rel="stylesheet" href="{{url_for('static' , path = 'css/employee.css') }}">
+{% endblock %}
+{% block body%}
+<main>
+    <div class="Searchcontainer">
+        <form method="GET" action="/details">
+        <div class="search-bar">
+            <input type="text" id="query" name="query" placeholder="Search employee by ID or Contact No...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+        </form>
+    </div>
+    <div class="container">
+        {% for i in range(0,total ,4) %}
+        <div class="rowcards">
+            {% for j in range(i,i+4) %}
+            {% if j<total %}
+              <div class="card">
+                    {% if employee_details[j].image_url == null%}
+                    <img src="" width="110" height="130">
+                    {% else %}
+                    <img src="{{employee_details[j].image_url}}" width="110" height="130">
+                    {% endif %}
+                    <div class="content"> 
+                        <h3 class="Main-text">{{employee_details[j].name}}</h3>
+                        <p class="text">{{employee_details[j].stack}}</p>
+                        <p class="text" >{{employee_details[j].email}}</p>
+                        <form method="GET" action="/employee_profile/{{employee_details[j].user_id}}">
+                        <button>View More</button>
+                       </form>
+                    </div>
+                </div> 
+            {% endif %}
+            {%endfor%}
+        </div>
+        {% endfor %}
+       
+        
+    </div>
+    </main>
+
+    <footer>
+        <div class="footercontainer">
+            <div class="logo">
+                <img src="{{url_for('static' , path = 'images/Logo.png') }}" alt="logo" width="150em" height="40em">
+                <p>&copy; 2023 Employee Directory. </p>
+            </div>
+            <div>
+                <ul class="social-icons">
+                    <li><a href="https://www.linkedin.com/company/senecaglobal/mycompany/verification/"
+                            target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://www.facebook.com/SenecaGlobalInnovates" target="_blank"><i
+                                class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/senecaglobal" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+{% endblock %}

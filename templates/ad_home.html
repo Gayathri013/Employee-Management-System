@@ -1,0 +1,118 @@
+{% extends 'ad_base.html' %}
+
+{% block title %}
+<link rel="stylesheet" href="{{url_for('static' , path = 'css/home.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="contentcenter">
+        <div class="first">Welcome to Employee Directory</div>
+        <div class="second">Discover, connect and grow within your organization.</div>
+    </div>
+</div>
+<div class="Image-content1">
+    <div class="employeesimg"><img src="{{url_for('static' , path = 'images/Senecaglobal.jpg') }}"></div>
+
+    <div class="storycontent">
+        <h2 class="orange">Overview</h2>
+        <p>SenecaGlobal is a world-class software development and technical advisory firm, focused on
+            middle-market clients. We deliver software of the highest quality on a cost-effective and timely
+            basis, and we enjoy long-term client relationships with many leading companies, across a variety of
+            industries.
+
+            SenecaGlobal is a values driven organization with strong focus on domain, technology and engineering
+            competence to generate high-performance outcomes. We strongly believe in long-term partnership
+            building with our clients and our associates.
+
+            As an information technology professional at SenecaGlobal, you will have an unlimited opportunity to
+            increase your skills and build a true career. All of our associates have the opportunity to share in
+            our significant future growth.
+
+            SenecaGlobal recognized by CIO Review Magazine as 20 Most Promising IT Services Companies 2016.
+            SenecaGlobal is a world-class software development and technical advisory firm, focused on
+            middle-market clients. We deliver software of the highest quality on a cost-effective and timely
+            basis, and we enjoy long-term client relationships with many leading companies, across a variety of
+            industries.
+        </p>
+    </div>
+</div>
+<br>
+
+<div class="Image-content2">
+    <div class="historycontent">
+        <h2 class="orange">History</h2>
+        <p>
+            In 2007, Ed Szofer, Rao Tummalapalli and Swaminathan Mani turned inspiration into reality with the
+            founding of SenecaGlobal.The senior executives previously worked together at companies where they
+            had significant success,including Whittman-Hart (where Ed was president and COO), Divine
+            Interventures (where Rao was managing director of offshore development) and Alliance Consulting.
+        </p>
+    </div>
+    <div class="Historyimg"><img src="{{url_for('static' , path = 'images/historyimg.png') }}">
+    </div>
+</div>
+<div class="Leaderscontainer">
+    <h2 class="centerText">Leaders</h2>
+    <div class="containercenter">
+        <div class="cards">
+            <div class="cardL1">
+                <img src="{{url_for('static' , path = 'images/Rao-Tummalapalli.jpg') }}" alt="Rao">
+                <p class="Lname">Rao Tummalapalli</p>
+                <p class="role">Managing Director and Co-Founder</p>
+            </div>
+            <div class="cardL1">
+                <img src="{{url_for('static' , path = 'images/Ed-Szofer.jpg') }}" alt="Szofer">
+                <p class="Lname">REd-Szofer</p>
+                <p class="role">President, Chief Executive Officer and Co-Founder</p>
+            </div>
+            <div class="cardL1">
+                <img src="{{url_for('static' , path = 'images/Haranath-Pinnamaneni.jpg') }}" alt="Haranath-Pinnamaneni">
+                <p class="Lname">Haranath-Pinnamaneni</p>
+                <p class="role">Senior Vice President, Technology and Delivery</p>
+            </div>
+        </div>
+        <div class="cards2">
+            <div class="cardL2">
+                <img src="{{url_for('static' , path = 'images/Sarma-Manthravadi.jpg') }}" alt="sarma">
+                <p class="Lname">Sarma-Manthravadi</p>
+                <p class="role">Managing Director and Co-Founder</p>
+            </div>
+            <div class="cardL2">
+                <img src="{{url_for('static' , path = 'images/Swaminathan-Mani.jpg') }}" alt="Swaminathan-Mani">
+                <p class="Lname">Swaminathan-Mani</p>
+                <p class="role">Director, Corporate Strategy and Planning and Co-Founder</p>
+            </div>
+            <div class="cardL2">
+                <img src="{{url_for('static' , path = 'images/Mike-OMalley.jpg') }}" alt="Mike-OMalley">
+                <p class="Lname">Mike-OMalley</p>
+                <p class="role">Senior Vice President, Operation</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="Achievements">
+    <h2 class="centerText">Achievements</h2>
+    <img src="{{url_for('static' , path = 'images/Achievements.jpg') }}" alt="Achievements" width="100%" height="300rem">
+</div>
+</main>
+<footer>
+<div class="footercontainer">
+    <div class="logo">
+        <img src="{{url_for('static' , path = 'images/Logo.png') }}" alt="logo" width="150rem" height="40rem">
+        <p>&copy; 2023 Employee Directory. All rights reserved.</p>
+    </div>
+    <div>
+        <ul class="social-icons">
+            <li><a href="https://www.linkedin.com/company/senecaglobal/mycompany/verification/"
+                    target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://www.facebook.com/SenecaGlobalInnovates" target="_blank"><i
+                        class="fab fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/senecaglobal" target="_blank"><i class="fab fa-twitter"></i></a>
+            </li>
+        </ul>
+    </div>
+</div>
+</footer>
+{% endblock %}

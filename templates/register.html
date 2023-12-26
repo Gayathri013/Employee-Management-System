@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="{{url_for('static' , path = 'css/register.css')}}">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Create account</h2>
+        <form  action="/admin_auth" method="POST" >
+            <div class="formerror"></div>
+            <input type="text" name="user_id" id="name" placeholder="User_ID" required>
+            <span class="formerror" id="sname"></span>
+            <input type="text" name="name" id="name" placeholder="Name" required>
+            <span class="formerror" id="sname"></span>
+            <br>
+            <select name="stack" id="role" placeholder="role" value="role">
+                <option value="role" selected>Select Role</option>
+                <option value="Frontend Developer">Frontend Developer</option>
+                <option value="Python Developer">Python Developer</option>
+                <option value="Java Developer">Java Developer</option>
+                <option value="IOS Developer">IOS Developer</option>
+                <option value="Andriod Developer">Andriod Developer</option>
+                <option value="Nodejs Developer">Nodejs Developer</option>
+            </select>
+            <span class="formerror" id="srole"></span>
+            <br>
+            <input name="email" type="email" id="email" placeholder="Email" required>
+            <span class="formerror" id="semail"></span>
+            <br>
+            <input type="password" name="password" id="password" placeholder="Password"  required>
+            <span class="formerror" id="spassword"></span>
+            <input type="password" name="cpassword" id="cpassword" placeholder="Confirm Password"  required>
+            <span class="formerror" id="scpassword"></span>
+            <input type="tel" id="phone" name="phone" placeholder="Phone No">
+            <span class="formerror" id="sphone"></span>
+            <br>
+            <div>
+            <label for="dob">DOB:</label>
+            <input type="date" id="dob" name="dob" placeholder="DOB">
+            <span class="formerror" ></span>
+            <select name="blood_group" id="blood-group" placeholder="Select Blood Group" value="bloodGroup">
+                <option value="bloodGroup">Select Blood Group</option>
+                <option value="A+">A Positive</option>
+                <option value="A-">A Negative</option>
+                <option value="B+">B Positive</option>
+                <option value="B-">B Negative</option>
+                <option value="AB+">AB Positive</option>
+                <option value="AB-">AB Negative</option>
+                <option value="O+">O Postive</option>
+                <option value="O-">O Negative</option>
+            </select>
+            <span class="formerror" id="sblood-group"></span>
+            </div>
+            <input type="text" id="address" name="address" placeholder="Address">   
+            <div class="maxl">
+                <label class="gender">Gender:</label>
+                <label class="radioinline"> 
+                    <input type="radio" name="gender" value="Male" checked><span> Male </span></label>
+                <label class="radio inline"><input type="radio" name="gender" value="Female"><span>Female </span> </label>
+            </div> 
+            <div class="SecurityContainer">
+            <div class="container1">
+                <label for="SecurityQns">Security Questions:</label>
+                <br>
+                <select id="SecurityQns" name="SecurityQns">
+                    <option value="What is your favourite food?">What is your favorite food?</option>
+                    <option value="What is the name of your favourite teacher? ">What is the name of your favorite teacher?
+                    </option>
+                    <option value="What is your favourite color?">What is your favorite color?</option>
+                    <option value="What was the name of your first best friend?">What was the name of your first best
+                        friend?</option>
+                    <option value="What is your favourite holiday destination?">What is your favorite holiday destination?
+                    </option>
+                </select>
+            </div>   
+            <div class="container2">
+                <label for="answer">Your Answer here : </label>
+                <br>
+                <input type="text" id="answer" name="answer" placeholder="Type your answer here">
+            </div>   
+            </div> 
+            <input type="submit" name="Register" value="Register" class="button" name="Register" id="Register">
+        </form>
+        <p class="gotologin">Already a member?<span class="blue"><a href="/" target="_self">Login</a></span></p>
+    </div>
+</body>
+
+</html>

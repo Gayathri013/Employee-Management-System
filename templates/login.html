@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>	
+    <link rel="stylesheet" href="{{url_for('static' , path = 'css/login.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Login</h2>
+    <form class="myForm" id="myForm" action="/login_auth" method="POST" >
+        {% if msg %}
+			<div class="alert alert-danger" role="alert" >
+				  {{msg}}
+			</div>
+		  {% endif %}
+
+		  {% for error in errors %}
+			<div class="alert alert-danger" role="alert" >
+				{{ error }}
+			</div>
+		   {% endfor %}
+
+        <input id="user_id" name="user_id" placeholder="User ID" required>  
+        <br>
+         <input type="password" name="password" id="password"  placeholder="Password"  required> 
+         <p><a href="/forgotpassword" >Forgot password ?</a></p>
+         <input type="submit" class="button" value="Login" name="login" id="login">
+    </form>
+        <p class="gotoreg">Not a member?<span class="blue"><a href="/register" target="_self">SignUp</a></span>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,192 @@
+body {
+    /* background-color: #4158D0; */
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background-color: white;
+    border-radius: 1rem;
+    /* display: inline-block; */
+    position: absolute;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    transform: translate(50%, -50%);
+    top: 50%;
+    right: 50%;
+    width: 30%;
+    height: auto;
+    padding: 1rem;
+    margin:25rem auto;
+}
+.formerror{
+    color:red;
+}
+label {
+    margin-top: 2rem;
+    color: rgb(163, 163, 163);
+} 
+.container h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.2rem solid silver;
+}
+
+.container form {
+    margin: 2rem;
+}
+
+.container input {
+    width: 100%;
+    margin: 1.3rem auto;
+    border: none;
+    border-bottom: 0.1px solid silver;
+    padding: 1rem 1rem;
+    height: 1rem;
+    font-size: 1rem;
+    font-weight: lighter;
+
+}
+
+.container input:hover {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.751)
+}
+
+.container input::placeholder {
+    color: rgb(163, 163, 163);
+}
+
+form #role {
+    width: 100%;
+    height: 3rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    background-color: white;
+    border:2px solid silver;
+}
+
+form div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+form div #dob {
+    padding: 0.8rem;
+    border-radius:0.4rem;
+    border: 0.1rem solid #ccc;
+    font-size:1rem;
+    width: 9vw;
+}
+
+/* #blood-group {
+    height: 3rem;
+    padding-top: 0.3rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    margin-left: 1rem;
+} */
+
+form  #blood-group {
+    width: 10vw;
+    padding: 0.4rem;
+    margin-top:1.2rem;
+    border-radius: 0.5rem;
+    border:0.1rem solid #ccc;
+    font-size: 1rem;
+    height:3rem;
+    background-color: white;
+}
+
+.container form p {
+    font-size: 1rem;
+    padding: 0.8rem 0rem;
+    color: rgb(163, 163, 163);
+}
+
+.maxl {
+    width: 18vw;
+    height: 13vh;
+}
+.gender{
+    margin-top: 4rem;
+    color: rgb(163, 163, 163);
+}
+form .input[radio]{
+    width:3rem;
+}
+.maxl label
+{
+    margin-top:0.5rem;
+    display: flex;
+    align-items: center;
+}
+.SecurityContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top:1rem;
+}
+
+form  #SecurityQns{
+    width: 100%;
+    height: 3rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    background-color: white;
+    border: 0.1rem solid silver;
+}
+.container .button{
+    display: block;
+    margin: 1rem auto;
+    font-size: 1.3rem;
+    width: 50%;
+    background-color: rgb(30, 45, 255);
+    padding: 0.6rem 0;
+    color: white;
+    border-radius: 1.2rem;
+    height: 3rem;
+}
+
+.container .button:hover {
+    cursor: pointer;
+}
+
+.gotologin {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+.gotologin span a {
+    text-decoration: none;
+}
+
+.blue {
+    color: #4158D0;
+}
+
+.blue:hover {
+    cursor: pointer;
+}
+
+
+@media(max-width:768px) {
+    html {
+      font-size: 80%;
+    }
+    .container{
+        width:50%;
+    }
+  }
+  
+  @media(max-width:998px) {
+    html {
+      font-size: 60%;
+    }
+  }
+  

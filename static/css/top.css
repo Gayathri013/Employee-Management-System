@@ -1,0 +1,134 @@
+.container
+{
+    
+    margin-top:6rem;
+    margin-bottom:3rem;
+    margin-left:10rem;
+    margin-right:10rem;
+    background-color: white;
+}
+.container h2 {
+    margin-top:30px;
+    position: relative;
+    animation: moving-text 5s linear 1s infinite normal;
+    text-align: center;
+    justify-content: center; 
+    font-size:3em;
+    font-weight: lighter;
+    left: 50%;
+  transform: translateX(-50%);
+}
+/* /* @keyframes moving-text {
+    from {
+       left:35%;
+      }
+      to {
+        right:20%;
+      } 
+  } */
+  
+
+table {
+    border-collapse: collapse;
+    width:80%;
+    margin: 3rem auto;
+}
+
+th,
+td {
+    text-align: center;
+    padding: 1.2rem;
+    border-bottom: 0.1rem solid #ddd;
+    font-size:1.5rem;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  width:7rem;
+  height: 3rem;
+  font-size: 1.5rem;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+.bgimg
+{
+  background-image:url("Images/13655") ;
+}
+.footercontainer{
+    height:13vh;
+   width:100%;
+    background-color:#f3f3f3;
+    position: relative;
+    bottom: 0;
+    /* border:2px solid darkorange; */
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+/* .fa-twitter{
+  background-color:rgb(20, 168, 227);
+  color:white;
+} */
+.social-icons .fa-linkedin {
+  color: #0077B5; /* LinkedIn blue */
+}
+
+.social-icons .fa-facebook {
+  color: #3b5998; /* Facebook blue */
+}
+
+.social-icons .fa-twitter {
+  color: #1DA1F2; /* Twitter blue */
+}
+.social-icons {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.social-icons a {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  border-radius:50%;
+  text-align: center;
+  background-color: white;
+  line-height: 4rem;
+}
+
+.social-icons a:hover {
+  background-color: #ccc;
+  color: #fff;
+}
+
+.social-icons i {
+  font-size: 2rem;
+}
+@media(max-width:700px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+@media(max-width:998px) {
+  html {
+    font-size: 65%;
+  }
+}

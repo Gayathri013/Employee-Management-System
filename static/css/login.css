@@ -1,0 +1,99 @@
+body {
+    /* background-color: #4158D0; */
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    height:100vh;
+}
+
+.container {
+    background-color: white;
+    border-radius: 15px;
+    /* display: inline-block; */
+    position:absolute; 
+    transform: translate(50%,-50%);
+     top:50%;
+    right:50%; 
+    width:28vw;
+    height:auto;
+}
+
+.container h2 {
+    text-align: center;
+    font-size:1.9rem;
+    padding-bottom:1rem;
+    border-bottom: 0.1rem solid silver;
+}
+.container form
+{
+    margin:1.8rem;
+}
+.container input
+{
+    width:100%;
+    margin:0.6rem auto;
+    border:none;
+    border-bottom:0.1px solid silver;
+    padding:0.6rem 0rem;
+    height:1.2rem;
+    font-size:large;
+
+}
+.container input:hover
+{
+    border:none;
+    border-bottom:1px solid rgba(0, 0, 0, 0.781);
+}
+.container input::placeholder
+{
+    color:rgb(163,163,163);
+}
+
+.container form p a
+{
+    font-size:1.2rem;
+    padding:5px 5px 0px 0px;
+    color:rgb(163,163,163);
+    text-decoration: none;
+}
+.container form p:hover
+{
+ cursor :pointer;
+ color: rgba(0, 0, 0, 0.97);
+} 
+.container .button 
+{
+   display:block;
+   margin:1rem auto;
+   font-size:1.2rem;
+   width:50%;
+   background-color: rgb(30, 45, 255);
+   padding: 0.6rem 0;
+   color:white;
+   border-radius: 1.2rem;
+   height:3rem;
+}
+.container .button:hover
+{
+    cursor:pointer;
+}
+.formerror
+{
+    color:red;
+}
+.gotoreg
+{
+   text-align:center;
+   font-size:1.3rem;
+   font-weight: lighter;
+}
+.gotoreg span a
+{
+    text-decoration: none;
+}
+.blue
+{
+    color:#4158D0;
+}
+.blue:hover
+{
+    cursor:pointer;
+}

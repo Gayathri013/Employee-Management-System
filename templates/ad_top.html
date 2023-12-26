@@ -1,0 +1,38 @@
+{% extends 'ad_base.html' %}
+
+
+{% block title %}
+    <link rel="stylesheet" href="{{url_for('static' , path = 'css/top.css') }}">
+{% endblock %}
+
+{% block body%}
+
+<div class="container">
+    <section id="top-performers">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Stack</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Action</th>
+        </tr>
+        {% for emp in employee_details %}
+        <tr>
+            <td>{{ emp.name }}</td>
+            <td>{{ emp.stack }}</td>
+            <td>{{ emp.email}}</td>
+            <td>{{ emp.phone_number}}</td>
+            <td>
+            <form method="GET" action="/ad_profile/{{emp.user_id}}">
+                <button>View</button>
+            </form>
+            </td>
+        </tr>
+            
+        {% endfor %}
+        </table>
+     </section>
+   </div>
+
+{% endblock %}

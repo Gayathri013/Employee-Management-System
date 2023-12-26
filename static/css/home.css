@@ -1,0 +1,298 @@
+.active {
+  background-color: #4CAF50;
+}
+
+.container {
+  background-color: black;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+
+}
+.CompanyInfo
+{
+  width: 80%;
+  margin: auto;
+  background: #43cea2;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #185a9d, #43cea2);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #185a9d, #43cea2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.container ::after {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80vh;
+  opacity: 0.19;
+}
+
+/* .container {
+    position: static;
+    margin:0rem;
+    padding:0rem;
+    width: auto;
+  } */
+
+.contentcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60vh;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.first {
+  text-align: center;
+  font-size: 4rem;
+  color: white;
+}
+
+.second {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+}
+
+.content1 {
+  color: rgba(8, 8, 8, 0.675);
+
+}
+
+.centerText {
+  text-align: center;
+  color: darkorange;
+  font-weight: lighter;
+  font-size: 4rem;
+}
+
+.cards {
+  margin: 0rem 10rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.Leaderscontainer {
+  width: 80%;
+  margin: auto;
+  background: #ffb347;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ffcc33, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ffcc33, #ffb347); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/* .containercenter {
+   display: block;
+   margin:auto;
+} */
+.cards .cardL1 {
+  margin: 1rem 3rem;
+  width: 12.5rem;
+  background: #c7bdbd;
+  justify-content: center;
+}
+
+.cards .cardL1 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.role {
+  text-align: center;
+
+}
+
+.cards2 {
+  margin: 0rem 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.cards2 .cardL2 {
+  margin: 0rem 3rem;
+  width: 12.5rem;
+  background: #c7bdbd;
+}
+
+.cards2 .cardL2 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.Lname {
+  text-align: center;
+  color: white;
+}
+
+
+.Image-content1 {
+  display: flex;
+  margin: 0 8rem;
+  justify-content: space-between;
+} 
+@media (max-width:786px) {
+  .Image-content1{
+    flex-direction: column;
+  }
+}
+
+.Image-content1 img {
+  max-width: 100%;
+  height: 70%;
+  margin: 4rem 4rem 0 0;
+}
+
+.employeesimg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-top: 1rem;
+  width: 30%;
+}
+
+.storycontent {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  width: 60%;
+  margin-top: 1rem;
+}
+
+.historycontent {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  width: 60%;
+  margin-top: 1rem;
+}
+
+.Image-content2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 8rem;
+  justify-content: space-between;
+}
+
+.Image-content2 img {
+  max-width: 100%;
+  height: 70%;
+}
+
+.Historyimg {
+  background-size: cover;
+  height: auto;
+  width: 30%;
+  margin-top: 1rem;
+}
+
+
+.orange {
+  text-align: center;
+  color: orange;
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+.footercontainer {
+  height: 10vh;
+  background-color: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.social-icons .fa-linkedin {
+  color: #0077B5;
+}
+
+.social-icons .fa-facebook {
+  color: #3b5998;
+}
+
+.social-icons .fa-twitter {
+  color: #1DA1F2;
+}
+
+.social-icons {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-icons li {
+  margin-right: 1rem;
+}
+
+.social-icons li:last-child {
+  margin-right: 0;
+}
+
+.social-icons a {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 4rem;
+  text-align: center;
+  background-color: white;
+  line-height: 4rem;
+}
+
+.social-icons a:hover {
+  background-color: #ccc;
+  color: #fff;
+}
+
+.social-icons i {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 480px) {
+  .first {
+    font-size: 30px;
+  }
+
+  .second {
+    font-size: 16px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .cards .cardL1,
+  .cards2 .cardL2 {
+    width: 80%;
+  }
+}
+
+@media(max-width:768px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media(max-width:998px) {
+  html {
+    font-size: 55%;
+  }
+}
